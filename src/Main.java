@@ -11,7 +11,7 @@ public class Main {
 
 	public static void abertura() {
 		System.out.print("Abra uma conta digitando seu nome: ");
-        String nome = scanner.nextLine();
+        	String nome = scanner.nextLine();
 		
 		Cliente cliente = new Cliente(nome);
 		
@@ -31,7 +31,7 @@ public class Main {
 		
 		switch (scanner.nextInt()) {
 			case 1:
-				saque(corrente, poupanca);
+				saque();
 				break;
 			case 2:
 				deposito();
@@ -49,7 +49,7 @@ public class Main {
 		}
 	}
 
-	public static void saque(Conta corrente, Conta poupanca) {
+	public static void saque() {
 		System.out.println("Informe a conta da qual será feito o saque: ");
 			System.out.println("5 para CONTA CORRENTE: ");
 			System.out.println("6 para CONTA POUPANÇA: ");
@@ -152,7 +152,7 @@ public class Main {
 			abertura();
 			principal();
 		} catch(InputMismatchException ime) {
-            		System.out.println("Obrigado por utilizar nossos serviços!");
+            System.out.println("Obrigado por utilizar nossos serviços!");
 		} catch(IllegalStateException ise) {
 			System.out.println("Obrigado por utilizar nossos serviços!");
 		}
