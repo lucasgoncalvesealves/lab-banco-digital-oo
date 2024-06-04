@@ -2,11 +2,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
 
-	public static Scanner scanner = new Scanner(System.in);
-	public static int conta;
-	public static double valor;
-	public static Conta corrente;
-	public static Conta poupanca;
+	private static Scanner scanner = new Scanner(System.in);
+	private static int conta;
+	private static double valor;
+	private static Conta corrente;
+	private static Conta poupanca;
 
 	public static void abertura() {
 		System.out.print("Abra uma conta digitando seu nome: ");
@@ -151,7 +151,9 @@ public class Main {
 			abertura();
 			principal();
 		} catch(InputMismatchException ime) {
-            System.out.println("Obrigado por utilizar nossos serviços!");
+            		System.out.println("Obrigado por utilizar nossos serviços!");
+		} catch(IllegalStateException ise) {
+			System.out.println("Obrigado por utilizar nossos serviços!");
 		}
 	}
 
